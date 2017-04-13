@@ -62,14 +62,6 @@ def testWindowsNoDocker = {
 
 //testAndPublish(name, [ubuntu: testUbuntu, windows: testWindows, windowsNoDocker: testWindowsNoDocker])
 
-// XXX the following code expected as temporary
-testAndPublish(name, [ubuntu: testUbuntu], false) // run tests only
-
-def releaseVersion = ''
-stage('Get release version') {
-    node('ubuntu-master') {
-        releaseVersion = getReleaseVersion()
-    }
-}
-
-testAndPublish.publishPypi('Publish to pypi', [:], releaseVersion)
+def options = new TestAndPublishOptions()
+options.skip([StagesEnum.PACK_RELEASE]) // the following debs packages skip expected as temporary
+testAndPublish(name, [ubuntu: testUbuntu], true, options)
