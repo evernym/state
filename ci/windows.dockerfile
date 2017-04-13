@@ -1,6 +1,6 @@
 FROM microsoft/windowsservercore
 
-LABEL Description="state" Vendor="Evernym"
+LABEL Description="evernym-state" Vendor="Evernym"
 
 # Install environment
 
