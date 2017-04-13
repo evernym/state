@@ -32,7 +32,7 @@ METADATA = os.path.join(SETUP_DIRNAME, 'state', '__metadata__.py')
 exec(compile(open(METADATA).read(), METADATA, 'exec'))
 
 setup(
-    name='state',
+    name='evernym-state',
     version=__version__,
     author=__author__,
     author_email='dev@evernym.us',
