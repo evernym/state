@@ -63,5 +63,4 @@ def testWindowsNoDocker = {
 //testAndPublish(name, [ubuntu: testUbuntu, windows: testWindows, windowsNoDocker: testWindowsNoDocker])
 
 def options = new TestAndPublishOptions()
-options.skip([StagesEnum.PACK_RELEASE]) // the following debs packages skip expected as temporary
 testAndPublish(name, [ubuntu: testUbuntu], true, options)
