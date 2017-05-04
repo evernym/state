@@ -2,7 +2,7 @@
 
 @Library('SovrinHelpers') _
 
-def name = 'evernym-state'
+def name = 'state-trie'
 
 def testUbuntu = {
     try {

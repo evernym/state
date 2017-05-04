@@ -1,6 +1,6 @@
 FROM microsoft/windowsservercore
 
-LABEL Description="evernym-state" Vendor="Evernym"
+LABEL Description="state-trie" Vendor="Evernym"
 
 # Install environment
 
